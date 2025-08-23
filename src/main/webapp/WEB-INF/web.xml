@@ -7,12 +7,12 @@
          version="6.0">
          
          <servlet>
-            <servlet-name>test</servlet-name>
+            <servlet-name>maServlet</servlet-name>
             <servlet-class>com.apprendreJAVAEE.servlets.test</servlet-class>        
          </servlet>
          
          <servlet-mapping>
-            <servlet-name>test</servlet-name>
+            <servlet-name>maServlet</servlet-name>
             <url-pattern>/hello</url-pattern>
          </servlet-mapping>
 
