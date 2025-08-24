@@ -28,8 +28,16 @@ public class test extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
 		request.setAttribute("name", name);
+		
+		String age = request.getParameter("age");
+		request.setAttribute("age", age);
+		
+		String[] noms = {"alice", "karim", "denis"};
+		request.setAttribute("noms", noms);
+		
 		String message = "Au revoir";
 		request.setAttribute("variable", message);
+		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 
 	}

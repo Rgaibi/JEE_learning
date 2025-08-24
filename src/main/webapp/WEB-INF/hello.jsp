@@ -14,8 +14,10 @@
    	String name = (String) request.getAttribute("name");
   	out.println(name);
    	%> 
+   	${empty age ? "" : "tu as"} ${ age }
   </h1>
   <p>voilà un paragraphe</p>
+  <p> ${ noms[0] } ${ noms[1] }</p>
   <p>
     <%
     String variable = (String) request.getAttribute("variable");
