@@ -9,7 +9,12 @@
  </head>
  <body>
   <%@ include file = "menu.jsp" %>
-  <h1>hello </h1>
+  <h1>hello
+   	<%
+   	String name = (String) request.getAttribute("name");
+  	out.println(name);
+   	%> 
+  </h1>
   <p>voilà un paragraphe</p>
   <p>
     <%
