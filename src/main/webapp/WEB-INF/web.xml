@@ -15,5 +15,15 @@
             <servlet-name>maServlet</servlet-name>
             <url-pattern>/hello</url-pattern>
          </servlet-mapping>
+         
+         <servlet>
+            <servlet-name>maServlet1</servlet-name>
+            <servlet-class>com.apprendreJAVAEE.servlets.accueil</servlet-class>        
+         </servlet>
+         
+         <servlet-mapping>
+            <servlet-name>maServlet1</servlet-name>
+            <url-pattern>/accueil</url-pattern>
+         </servlet-mapping>
 
 </web-app>

@@ -5,17 +5,11 @@
 <html>
  <head>
   <meta charset="UTF-8">
-  <title>premier JSP</title>
+  <title>accueil</title>
  </head>
  <body>
   <%@ include file = "menu.jsp" %>
   <h1>hello </h1>
-  <p>voilà un paragraphe</p>
-  <p>
-    <%
-    String variable = (String) request.getAttribute("variable");
-    out.println(variable);
-    %>
-  </p>
+  <p>bienvenue sur mon site</p>
  </body>
 </html>
