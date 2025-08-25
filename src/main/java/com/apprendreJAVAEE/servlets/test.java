@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import com.apprendreJAVAEE.beans.Client;
+
 
 
 /**
@@ -37,6 +39,17 @@ public class test extends HttpServlet {
 		
 		String message = "Au revoir";
 		request.setAttribute("variable", message);
+		
+		//javabeans
+		
+		Client client = new Client();
+		client.setPrenom("Karim");
+		client.setNom("Rgaibi");
+		client.setAge(33);
+		client.setActif(true);
+		
+		request.setAttribute("client", client);
+		
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 

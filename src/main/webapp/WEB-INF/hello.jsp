@@ -24,5 +24,7 @@
     out.println(variable);
     %>
   </p>
+  <h2>bonjour je suis javabean</h2>
+  <p>${ client.prenom } ${ client.nom } ${ client.age } ${ client.actif ? "vous êtes actif" : "vous êtes inactif" }</p>
  </body>
 </html>
