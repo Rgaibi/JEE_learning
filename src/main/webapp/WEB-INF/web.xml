@@ -27,3 +27,12 @@
          </servlet-mapping>
 
 </web-app>
+
+<jsp-config>
+	<jsp-proprety-group>
+		<url-pattern>*.jsp </url-pattern>
+		<include-prelude>/web -inf..</include-prelude>
+	</jsp-proprety-group>
+</jsp-config>
+
+
