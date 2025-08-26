@@ -26,13 +26,13 @@
             <url-pattern>/accueil</url-pattern>
          </servlet-mapping>
 
-</web-app>
-
-<jsp-config>
-	<jsp-proprety-group>
-		<url-pattern>*.jsp </url-pattern>
-		<include-prelude>/web -inf..</include-prelude>
-	</jsp-proprety-group>
-</jsp-config>
+		 <jsp-config>
+    		<jsp-property-group>
+        		<url-pattern>*.jsp</url-pattern>
+        		<include-prelude>/WEB-INF/taglibs.jsp</include-prelude>
+    		</jsp-property-group>
+		 </jsp-config>
+		 
+</web-app>		
 
 
