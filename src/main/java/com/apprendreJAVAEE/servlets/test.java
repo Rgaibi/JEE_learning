@@ -45,7 +45,7 @@ public class test extends HttpServlet {
 		Client client = new Client();
 		client.setPrenom("Karim");
 		client.setNom("Rgaibi");
-		client.setAge(33);
+		client.setAge(17);
 		client.setActif(true);		
 		request.setAttribute("client", client);
 		
