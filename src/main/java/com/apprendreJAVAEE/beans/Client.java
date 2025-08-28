@@ -5,6 +5,7 @@ package com.apprendreJAVAEE.beans;
 		private String prenom;
 		private int age;
 		private boolean actif;
+		
 		public String getNom() {
 			return nom;
 		}

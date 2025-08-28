@@ -32,8 +32,8 @@
   
   	<h2>bonjour je suis javabean</h2>
   	<p>${ client.prenom } ${ client.nom } ${ client.age } ${ client.actif ? "vous êtes actif" : "vous êtes inactif" }</p>
-  	<p><c:set target="${ client}" property="prenom" value="alice"/></p>
-  	<p><c:out value="${ client.prenom }"/></p>
+	<c:set var="prenomClient" value="${client.prenom}" />
+	<p>Prénom du client : ${prenomClient}</p>
   
   
   <!-- JSTL et variables -->
@@ -84,8 +84,36 @@
 	</c:forEach>
   	
   	
+  	<!-- Les formulaires avec JAVA EE -->
+  	<h1>Formulaire d'exemple</h1>
+	<form action="hello" method="post">
+
+    	<fieldset>
+        	<legend>Informations personnelles</legend>
+
+        	<label for="nom">Username :</label>
+       		<input type="text" id="user" name="username" placeholder="Entrez votre nom" required>
+       		<br><br>
+
+        	<label for="mdp">Mot de passe :</label>
+        	<input type="password" id="mdp" name="mdp" required>
+        	<br><br>
+
+        	<label for="dateNaissance">Date de naissance :</label>
+        	<input type="date" id="dateNaissance" name="dateNaissance">
+        	<br>
+        	    
+    		<input type="submit" value="Se connecter">
+        	
+    	</fieldset>
+  		
+	</form>
 	
-	
+
+	<c:if test="${!empty username}">
+    	<p> <c:out value="Salut ${ username } , vous êtes en ligne" /></p>
+	</c:if>
+
   
 
  </body>

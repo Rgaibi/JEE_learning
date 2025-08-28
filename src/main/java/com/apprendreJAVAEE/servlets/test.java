@@ -56,7 +56,20 @@ public class test extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+		String user = request.getParameter("username");
+		
+		
+		request.setAttribute("username", user);
+		
+		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 
+	
+	}
 }
+	
+	
+	
+	
+	
+	
+	
