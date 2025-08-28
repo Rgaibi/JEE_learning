@@ -9,6 +9,8 @@ import java.io.IOException;
 
 import com.apprendreJAVAEE.beans.Client;
 
+import com.apprendreJAVAEE.forms.ConnectionForm;
+
 
 
 /**
@@ -56,10 +58,12 @@ public class test extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String user = request.getParameter("username");
+
+		ConnectionForm cnxForm = new ConnectionForm();
 		
+		cnxForm.verifierIdentifiant(request);
 		
-		request.setAttribute("username", user);
+		request.setAttribute("form", cnxForm);
 		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);
 

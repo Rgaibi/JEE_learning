@@ -110,8 +110,9 @@
 	</form>
 	
 
-	<c:if test="${!empty username}">
-    	<p> <c:out value="Salut ${ username } , vous êtes en ligne" /></p>
+	<c:if test="${not empty form.resultat}">
+    	<p> <c:out value="Salut ${ form.resultat }" /></p>
+    	<p>Salut <c:out value="${form.resultat}" /></p>
 	</c:if>
 
   
