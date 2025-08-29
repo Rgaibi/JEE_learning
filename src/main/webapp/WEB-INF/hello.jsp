@@ -101,7 +101,8 @@
 
         	<label for="dateNaissance">Date de naissance :</label>
         	<input type="date" id="dateNaissance" name="dateNaissance">
-        	<br>
+        	<br><br>
+
         	    
     		<input type="submit" value="Se connecter">
         	
@@ -111,11 +112,38 @@
 	
 
 	<c:if test="${not empty form.resultat}">
-    	<p> <c:out value="Salut ${ form.resultat }" /></p>
     	<p>Salut <c:out value="${form.resultat}" /></p>
-	</c:if>
+	</c:if> -->
 
-  
+    
+    <!-- les fichier avec JAVA EE -->
+  	<h1>Envoyer des fichiers</h1>
+    <form action="hello" method="post" enctype="multipart/form-data">
+
+    	<fieldset>
+        	<legend>Informations sur le fichier</legend>
+
+        	<label for="description">Description du fichier:</label>
+       		<input type="text" id="description" name="description" placeholder="Entrez la description" required>
+       		<br><br>
+
+        	
+        	<label for="fichier">Fichier à envoyer</label>
+        	<input type="file" id="fichier" name="fichier">
+        	<br>
+        	    
+    		<input type="submit" value="Envoyer">
+        	
+    	</fieldset>
+  		
+	</form>  
+	
+	<c:if test="${not empty nomFichier}">
+		<p>Fichier uploadé avec succès</p>
+    	<p>description : <c:out value="${description}" /></p>
+    	<p>nom du fichier : <c:out value="${nomFichier}" /></p>
+	</c:if>
+	
 
  </body>
 </html>

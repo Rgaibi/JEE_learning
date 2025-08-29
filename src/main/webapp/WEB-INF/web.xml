@@ -8,7 +8,15 @@
          
          <servlet>
             <servlet-name>maServlet</servlet-name>
-            <servlet-class>com.apprendreJAVAEE.servlets.test</servlet-class>        
+            <servlet-class>com.apprendreJAVAEE.servlets.test</servlet-class>
+            
+            <multipart-config>
+        		<location>E:\Téléchargements</location>          <!-- chemin où les fichiers temporaires seront stockés -->
+        		<max-file-size>5242880</max-file-size>   <!-- 5 Mo -->
+        		<max-request-size>20971520</max-request-size> <!-- 20 Mo -->
+        		<file-size-threshold>1048576</file-size-threshold> <!-- 1 Mo -->
+    		</multipart-config>
+                    
          </servlet>
          
          <servlet-mapping>
