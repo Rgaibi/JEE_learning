@@ -1,7 +1,6 @@
 package com.apprendreJAVAEE.servlets;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,7 +10,7 @@ import com.apprendreJAVAEE.beans.Client;
 
 import com.apprendreJAVAEE.forms.ConnectionForm;
 
-import jakarta.servlet.http.Part;
+
 
 /**
  * Servlet implementation class test
@@ -62,31 +61,15 @@ public class test extends HttpServlet {
 		// TODO Auto-generated method stub
         
 		// formulaire
-		/*ConnectionForm cnxForm = new ConnectionForm();
+		ConnectionForm cnxForm = new ConnectionForm();
 		
 		cnxForm.verifierIdentifiant(request);
 		
-		request.setAttribute("form", cnxForm);*/
-		
-		
-		//fichier
-        // Récupération de la description
-        String description = request.getParameter("description");
-        // Récupération du fichier
-        Part filePart = request.getPart("fichier");
-        String fileName = filePart.getSubmittedFileName();
-        // Sauvegarde dans le dossier temporaire (défini dans <location> web.xml)
-        filePart.write(fileName);
-
-        // Attributs pour la JSP
-        request.setAttribute("description", description);
-        request.setAttribute("nomFichier", fileName); 
+		request.setAttribute("form", cnxForm);
 		
 		
 
-
-        
-        
+             
         
         // Redirection vers la JSP
         this.getServletContext().getRequestDispatcher("/WEB-INF/hello.jsp").forward(request, response);

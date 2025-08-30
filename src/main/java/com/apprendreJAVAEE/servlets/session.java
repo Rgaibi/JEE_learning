@@ -1,30 +1,25 @@
 package com.apprendreJAVAEE.servlets;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.Part;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-
-
 /**
- * Servlet implementation class accueil
+ * Servlet implementation class session
  */
-//@WebServlet("/test")
-
-
-
-
-public class accueil extends HttpServlet {
+//@WebServlet("/session")
+public class session extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public accueil() {
+    public session() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,30 +29,24 @@ public class accueil extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		this.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp").forward(request, response);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/session.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		String login = request.getParameter("login");
+        String key = request.getParameter("key");
 
-		//fichier
-        // Récupération de la description
-        String description = request.getParameter("description");
-        // Récupération du fichier
-        Part filePart = request.getPart("fichier");
-        String fileName = filePart.getSubmittedFileName();
-        // Sauvegarde dans le dossier temporaire (défini dans <location> web.xml)
-        filePart.write(fileName);
-
-        // Attributs pour la JSP
-        request.setAttribute("description", description);
-        request.setAttribute("nomFichier", fileName); 
-        this.getServletContext().getRequestDispatcher("/WEB-INF/accueil.jsp").forward(request, response);
+        // Exemple simple de login
+        HttpSession session = request.getSession(); // crée  une session
+        session.setAttribute("login", login);
         
+
        
+
+		this.getServletContext().getRequestDispatcher("/WEB-INF/session.jsp").forward(request, response);
 	}
 
 }

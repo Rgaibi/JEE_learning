@@ -3,5 +3,6 @@
 <ul>
 	<li><a href="/test">test</a></li>
 	<li><a href="/test/accueil">accueil</a></li>
-	<li><a href="/test/hello">hello</a></li>
+	<li><a href="/test/bonjour">bonjour</a></li>
 </ul>
+
