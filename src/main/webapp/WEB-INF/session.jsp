@@ -22,6 +22,8 @@
 	<c:if test="${ not empty sessionScope.login }">
 		<p> vous etes <c:out value="${ sessionScope.login }"></c:out></p>
 	</c:if>
+	
+	<c:out value="${ login }"></c:out>
 		
 </body>
 </html>
