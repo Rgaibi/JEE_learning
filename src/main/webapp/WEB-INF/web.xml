@@ -46,6 +46,18 @@
          </servlet-mapping>
          
          
+         
+         <servlet>
+            <servlet-name>maServlet3</servlet-name>
+            <servlet-class>com.apprendreJAVAEE.servlets.baseDonnées</servlet-class>                                
+         </servlet>
+         
+         <servlet-mapping>
+            <servlet-name>maServlet3</servlet-name>
+            <url-pattern>/baseDonnées</url-pattern>
+         </servlet-mapping>
+         
+         
 
 		 <jsp-config>
     		<jsp-property-group>
